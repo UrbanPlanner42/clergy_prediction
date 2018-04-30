@@ -184,7 +184,7 @@
 TimeSeries_YearOrdanation <- Year_Ordanation_Male[Year_Ordanation_Female$`female_df$year_ordanation` > 1950 &
                                                     Year_Ordanation_Female$`female_df$year_ordanation` <= 2017, ] #Track only from 1950 to 2017
     
-    TimeSeries_YearOrdanation <- ts(TimeSeries_YearOrdanation$Total, start = c(1951, 1), frequency = 1) #Track every year
+    TimeSeries_YearOrdanation <- ts(TimeSeries_YearOrdanation$Total, start = c(1964, 1), frequency = 1) #Track every year
     TimeSeries_YearOrdanation <- tsclean(TimeSeries_YearOrdanation) #Time series clean function
     plot(TimeSeries_YearOrdanation)
     
@@ -203,5 +203,7 @@ TimeSeries_YearOrdanation <- Year_Ordanation_Male[Year_Ordanation_Female$`female
     
     #Get the Number for 5 years ----
     Female_Prediciton_5years <- 2.718^pred$pred
+    
+
     
     
